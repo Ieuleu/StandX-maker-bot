@@ -1,0 +1,25 @@
+{
+  "name": "standx-airdrop-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "marketMaker.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@noble/curves": "^2.0.1",
+    "@noble/hashes": "^2.0.1",
+    "@scure/base": "^2.0.0",
+    "axios": "^1.13.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.2.3",
+    "ethers": "^6.16.0",
+    "tsx": "^4.21.0",
+    "tweetnacl": "^1.0.3",
+    "tweetnacl-util": "^0.15.1",
+    "uuid": "^13.0.0",
+    "ws": "^8.19.0"
+  }
+}
