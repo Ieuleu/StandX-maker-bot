@@ -37,17 +37,18 @@ Discord (or any webhook-compatible) notifications are sent on:
 | `ETH-USD` | Ethereum / US Dollar |
 | `XAU-USD` | Gold / US Dollar |
 | `XAG-USD` | Silver / US Dollar |
+| `CL-USD`  | CrudeOil / US Dollar |
 
 ---
 
 ## Configuration
 
-Copy `.env.example` to `.env` and fill in the values below.
+`.env` example:
 
 ```env
 # Market
 SYMBOL=BTC-USD           # BTC-USD | ETH-USD | XAU-USD | XAG-USD
-QTY=0.01                 # Position size per order
+QTY=0.01                 # Position size per order (with leverage)
 
 # Spread parameters
 TARGET_SPREAD_BPS=8      # Target spread in basis points (must be < 10)
@@ -67,6 +68,8 @@ TIME_WINDOW=120              # Time window in seconds (default: 2 minutes)
 PAUSE_SLEEP=600              # Cooldown duration in seconds (default: 10 minutes)
 ```
 
+You can set the leverage manually on StandX website.
+
 ---
 
 ## Getting Started
@@ -75,16 +78,16 @@ PAUSE_SLEEP=600              # Cooldown duration in seconds (default: 10 minutes
 2. Install dependencies
 3. Copy and configure your `.env` file
 4. Create authToken.json using generateToken.ts
-5. Send authToken.json to your folder
 6. Start marketMaker.ts
 
 ```bash
-git clone https://github.com/your-username/StandX-maker-bot.git
+git clone https://github.com/Ieuleu/StandX-maker-bot.git
 cd StandX-maker-bot
-cp .env.example .env
+touch .env
 # Edit .env with your values
-npm install   # or pip install -r requirements.txt
-npm start     # or python main.py
+npm install
+tsx generateToken.ts
+tsx marketMaker.ts
 ```
 
 ---
