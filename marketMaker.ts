@@ -28,8 +28,8 @@ if (!targetSpreadBps || !toleranceBps || !qty || !symbol || !maxAttempsEnv || !a
 }
 const maxAttemps = parseInt(maxAttempsEnv);
 const attempSleep = parseInt(attempSleepEnv)*1000;
-const pauseSleep = parseInt(pauseSleepEnv)*60*1000;
-const timeWindow = 2*60*1000;
+const pauseSleep = parseInt(pauseSleepEnv)*1000;
+const timeWindow = timeWindowEnv*1000;
 const maxOrderWithinWindow = parseInt(maxOrderWithinWindowEnv);
 
 
